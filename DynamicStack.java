@@ -29,7 +29,8 @@ class IntArrayStack {
     }
     
     public int pop() {
-        return stack[--topIndex];
+        topIndex -= 1;
+        return stack[topIndex];
     }
     
     public int top() {
@@ -37,7 +38,7 @@ class IntArrayStack {
             System.out.print("Stack is empty");
             return -1;
         }
-        return stack[topIndex];
+        return stack[topIndex - 1];
     }
     
     public boolean isEmpty() {
